@@ -11,8 +11,7 @@ export default class MinHeap {
     insert(value: number): void {
         this.data.push(value);
         this.length++;
-        let indexOfLastElement = this.length - 1;
-        this.heapifyUp(indexOfLastElement);
+        this.heapifyUp(this.length - 1);
     }
     delete(): number {
         if (this.length == 0) {
