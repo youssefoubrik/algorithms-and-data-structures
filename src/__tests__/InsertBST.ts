@@ -1,14 +1,5 @@
 import insert from "@code/InsertBST";
-
-function isBST(node: BinaryNode<number> | null, min: number = -Infinity, max: number = Infinity): boolean {
-    if (!node) return true;
-
-    if (node.value < min || node.value > max) {
-        return false;
-    }
-
-    return isBST(node.left, min, node.value) && isBST(node.right, node.value, max);
-}
+import isBST from "@code/VerifyBST";
 
 test("InsertBST", function () {
     // Test inserting into empty tree
